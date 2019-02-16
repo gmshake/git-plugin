@@ -436,6 +436,7 @@ public class GitSCMSourceTest {
         FormValidation validation = scmSource.doCheckCredentialsId(null,"https://github.com/jenkinsci-cert/git-plugin.git",credential.getId());
         assertEquals(validation.kind,FormValidation.Kind.ERROR);
         assertThat(validation.getMessage(), startsWith("Error validating credentials"));
+    }
 
     @Issue("JENKINS-52754")
     @Test
